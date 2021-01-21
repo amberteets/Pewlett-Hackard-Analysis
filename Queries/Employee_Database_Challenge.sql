@@ -24,3 +24,11 @@ SELECT DISTINCT ON (emp_no) emp_no,
 INTO unique_titles
 FROM retirement_titles
 ORDER BY emp_no, to_date DESC;
+
+-- Get number of employees retiring by title
+SELECT title AS "Title", COUNT(emp_no) AS "No. Retiring"
+INTO retiring_titles
+FROM unique_titles
+GROUP BY "Title"
+ORDER BY "No. Retiring" DESC;
+
