@@ -32,3 +32,22 @@ FROM unique_titles
 GROUP BY "Title"
 ORDER BY "No. Retiring" DESC;
 
+-- 2. Mentorship-Eligibility
+-- Current employees eligible to participate in mentorship program (prospective retirees)
+-- emp_no, first_name, last_name, birth_date, from_date, to_date, title
+SELECT DISTINCT ON (e.emp_no) e.emp_no,
+	e.first_name,
+	e.last_name,
+	e.birth_date,
+	de.from_date,
+	de.to_date,
+	t.title
+INTO mentorship_eligibility
+FROM employees AS e
+	INNER JOIN dept_employees AS de
+		ON (e.emp_no = de.emp_no)
+	INNER JOIN titles AS t
+		ON (de.emp_no = t.emp_no)
+WHERE (e.birth_date BETWEEN '1965-01-01' AND '1965-12-31')
+	AND (de.to_date = ('9999-01-01'))
+ORDER BY emp_no, to_date DESC;
