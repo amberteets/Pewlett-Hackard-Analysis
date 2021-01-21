@@ -1,5 +1,5 @@
 -- Drop table if it already exists
-DROP TABLE IF EXISTS departments;
+DROP TABLE IF EXISTS departments CASCADE;
 
 -- Creating tables for PH-EmployeeDB
 CREATE TABLE departments (
@@ -9,7 +9,7 @@ CREATE TABLE departments (
      UNIQUE (dept_name)
 );
 
-DROP TABLE IF EXISTS employees;
+DROP TABLE IF EXISTS employees CASCADE;
 CREATE TABLE employees (
 	emp_no INT NOT NULL,
 	birth_date DATE NOT NULL,
@@ -41,6 +41,7 @@ CREATE TABLE salaries (
   PRIMARY KEY (emp_no)
 );
 
+-- Need to use 'composite primary key'
 DROP TABLE IF EXISTS dept_employees;
 CREATE TABLE dept_employees (
 	emp_no INT NOT NULL,
@@ -49,7 +50,7 @@ CREATE TABLE dept_employees (
 	to_date DATE NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
 	FOREIGN KEY (dept_no) REFERENCES departments (dept_no),
-	PRIMARY KEY (emp_no)
+	PRIMARY KEY (emp_no, dept_no)
 );
 
 DROP TABLE IF EXISTS titles;
@@ -59,5 +60,26 @@ CREATE TABLE titles (
 	from_date DATE NOT NULL,
 	to_date DATE NOT NULL,
 	FOREIGN KEY (emp_no) REFERENCES employees (emp_no),
-	PRIMARY KEY (emp_no)
+	PRIMARY KEY (emp_no, title, from_date)
 );
+
+-- Retirement eligibility
+SELECT first_name, last_name
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+-- Number of employees eligible for retirement
+SELECT COUNT(first_name)
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+-- Create retirement eligibility table to export to CSV
+SELECT first_name, last_name
+INTO retirement_info -- Sends output to new table named retirement_info
+FROM employees
+WHERE (birth_date BETWEEN '1952-01-01' AND '1955-12-31')
+AND (hire_date BETWEEN '1985-01-01' AND '1988-12-31');
+
+SELECT * FROM retirement_info;
