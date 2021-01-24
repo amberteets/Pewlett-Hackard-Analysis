@@ -16,7 +16,7 @@ Pewlett Hackard is anticipating a surge in employee retirement as its "Baby Boom
   
 ### Fig. 1: Retiring Titles
 
-![Retiring Titles](placeholder.png)
+![Retiring Titles](https://github.com/amberteets/Pewlett-Hackard-Analysis/blob/main/Data/Retiring%20Titles.png)
 
 ## Implications
 
