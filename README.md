@@ -18,3 +18,8 @@ Pewlett Hackard is anticipating a surge in employee retirement as its "Baby Boom
 
 Pewlett Hackard has a large number of employees who are eligible for retirement; 90,398 roles will need to be filled. Fortunately, there are many employees within each department that qualify as mentors for the next generation of workers. The following table shows the number of retirement-eligible and mentorship-eligible employees in each department.
 
+### Fig. 1: Readiness Assessment
+
+![Readiness Assessment](https://github.com/amberteets/Pewlett-Hackard-Analysis/blob/main/Data/PH_Readiness_Assessment.png)
+
+Departments with fewer eligible mentors (Research, Quality Management, Finance, etc.) may have difficulty training the next generation of employees if there is a low rate of participation in the mentorship program.
