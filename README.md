@@ -7,7 +7,6 @@ Pewlett Hackard is anticipating a surge in employee retirement as its "Baby Boom
 
 ## Results
 
-Pewlett Hackard has a large number of employees who are eligible for retirement: 90,398.
 - If all eligible employees choose to retire, a substantial number of senior-level positions will need to be filled including
   - 29,414 Senior Engineers
   - 28,254 Senior Staff
@@ -16,3 +15,6 @@ Pewlett Hackard has a large number of employees who are eligible for retirement:
   - 12,243 Staff are eligible for retirement
 
 ## Implications
+
+Pewlett Hackard has a large number of employees who are eligible for retirement; 90,398 roles will need to be filled. Fortunately, there are many employees within each department that qualify as mentors for the next generation of workers. The following table shows the number of retirement-eligible and mentorship-eligible employees in each department.
+
