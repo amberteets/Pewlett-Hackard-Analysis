@@ -13,12 +13,16 @@ Pewlett Hackard is anticipating a surge in employee retirement as its "Baby Boom
 - In addition to senior positions, many mid-level engineers and staff are eligible for retirement, potentially leaving large capability gaps within the organization
   - 14,222 Engineers are eligible for retirement
   - 12,243 Staff are eligible for retirement
+  
+### Fig. 1: Retiring Titles
+
+![Retiring Titles](placeholder.png)
 
 ## Implications
 
-Pewlett Hackard has a large number of employees who are eligible for retirement; 90,398 roles will need to be filled. Fortunately, there are many employees within each department that qualify as mentors for the next generation of workers. The following table shows the number of retirement-eligible and mentorship-eligible employees in each department.
+Pewlett Hackard has a large number of employees who are eligible for retirement; **90,398 roles** will need to be filled. Fortunately, there are many employees - **1,549 in total** - within each department that qualify as mentors for the next generation of workers. The following table shows the number of retirement-eligible and mentorship-eligible employees in each department.
 
-### Fig. 1: Readiness Assessment
+### Fig. 2: Readiness Assessment
 
 ![Readiness Assessment](https://github.com/amberteets/Pewlett-Hackard-Analysis/blob/main/Data/PH_Readiness_Assessment.png)
 
