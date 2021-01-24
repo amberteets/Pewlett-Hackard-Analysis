@@ -13,6 +13,7 @@ Pewlett Hackard is anticipating a surge in employee retirement as its "Baby Boom
 - In addition to senior positions, many mid-level engineers and staff are eligible for retirement, potentially leaving large capability gaps within the organization
   - 14,222 Engineers are eligible for retirement
   - 12,243 Staff are eligible for retirement
+- Only 2 members of management are retiring, leaving the Pewlett Hackard leadership largely intact
   
 ### Fig. 1: Retiring Titles
 
